@@ -10,8 +10,10 @@ public class Livro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(name = "nome_titulo")
     private String titulo;
 
+    @Column(name = "nome_autor")
     private String autor;
 
     private Integer anoPublicacao;
