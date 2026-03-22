@@ -26,7 +26,7 @@ public class LivroService {
         return livroRepository.findById(id).orElse(null);
     }
 
-    public List<Livro> buscar(){
+    public List<Livro> buscarTodos(){
         return livroRepository.findAll();
     }
 
