@@ -14,8 +14,8 @@ public class LivroService {
         this.livroRepository = livroRepository;
     }
 
-    public void salvar(Livro livro){
-        livroRepository.save(livro);
+    public Livro salvar(Livro livro){
+        return livroRepository.save(livro);
     }
 
     public void deletar(Long id) {
@@ -28,6 +28,11 @@ public class LivroService {
 
     public List<Livro> buscarTodos(){
         return livroRepository.findAll();
+    }
+
+    public Livro atualizar(Long id, Livro livro){
+        livro.setId(id);
+        return livroRepository.save(livro);
     }
 
 }
